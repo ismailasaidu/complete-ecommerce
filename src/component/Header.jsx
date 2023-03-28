@@ -7,13 +7,8 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import email from "../Assets/email.png";
 import arrow from "../Assets/arrow.png";
-import {
-  FaChevronCircleRight,
-  FaChevronRight,
-  FaInstagramSquare,
-  FaShoppingCart,
 
-} from "react-icons/fa";
+
 import {
   AiFillFacebook,
   AiFillHome,
@@ -21,8 +16,9 @@ import {
   AiFillTwitterSquare,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import {IoChevronForwardOutline} from "react-icons/io5"
 import { AiFillContacts } from "react-icons/ai";
-import { IoMdSettings } from "react-icons/io";
+import { IoMdCart, IoMdSettings ,} from "react-icons/io";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { MdEmail, MdEmailMdEmail } from "react-icons/md";
 import { GrInstagram } from "react-icons/gr";
@@ -100,7 +96,7 @@ const Header = () => {
         <>
           <div className="absolute hidden right-0 bg-blue w-[260px] h-[100%] top-[68px] mt-[-67px] z-10 sm:block transition-opacity duration-1500 ease-in">
             <div className="pt-[100px]">
-              <FaChevronRight
+              <IoChevronForwardOutline
                 className="absolute right-[20px] text-white top-[60px] font-bold text-[20px] w-[20px] h-[24px] "
                 onClick={() => {
                   setopen(false);
@@ -146,7 +142,7 @@ const Header = () => {
                     </h1>
                   </div>
                   <div className="flex items-center flex-row gap-[20px]">
-                    <FaShoppingCart />
+                    <IoMdCart />
                     <h1
                       onClick={() => {
                         navigate("/cart");

@@ -13,7 +13,7 @@ import { db } from "../lib/init-firebase";
 import { useState, useEffect } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
-import { FaTwitterSquare } from "react-icons/fa";
+
 import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { GrInstagram } from "react-icons/gr";
