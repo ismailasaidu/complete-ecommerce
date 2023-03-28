@@ -28,12 +28,12 @@ const Header = () => {
     return item.cart.value;
   });
   const [open, setopen] = useState(false);
-  open
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
-  open
-    ? (document.body.style.disabled = "true")
-    : (document.body.style.overflow = "false");
+  // open
+  //   ? (document.body.style.overflow = "hidden")
+  //   : (document.body.style.overflow = "auto");
+  // open
+  //   ? (document.body.style.disabled = "true")
+  //   : (document.body.style.overflow = "false");
 
 
 
