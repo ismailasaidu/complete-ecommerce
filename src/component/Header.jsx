@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import account from "../Assets/account.png";
 import Cart from "../Assets/cart.png";
 import hamburger from "../Assets/hamburger.png";
@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import email from "../Assets/email.png";
 import arrow from "../Assets/arrow.png";
+
 
 
 import {
@@ -31,15 +32,32 @@ const Header = () => {
     ? (document.body.style.overflow = "hidden")
     : (document.body.style.overflow = "auto");
   open
-    ? (document.body.style.disbled = "true")
+    ? (document.body.style.disabled = "true")
     : (document.body.style.overflow = "false");
+
+
+
+   
+useEffect(() => {
+ let handler =(e)=>{
+  if(!menuRef.current.contains(e.target)){
+    setopen(false) 
+  }
+
+ }
+
+ document.addEventListener("mousedown", handler)
+}, [])
+
+   
+const menuRef =useRef()
 
   const navigate = useNavigate();
   return (
     <div className="flex items-center  justify-between pt-10 px-14 h-32 sm:px-[10px]  ">
       <div>
         <h1
-          className="font-display text-5xl font-medium sm:text-[30px] "
+          className="font-display  text-5xl font-medium sm:text-[30px] "
           onClick={() => {
             navigate("/");
           }}>
@@ -84,21 +102,23 @@ const Header = () => {
         <div className="sm:hidden">
           <img src={hamburger} alt="nav-icons" />
         </div>
-        <div
-          className="hidden sm:block"
+        <button 
+          className="hidden sm:block ;"
           onClick={() => {
             if (!open) {
               setopen(true)
+              document.body.classList.toggle('menu-open');
             } else {
               setopen(false)
             }
+            
           }}>
           <img src={hamburger} alt="nav-icons " />
-        </div>
+        </button>
       </div>
       {open ? (
         <>
-          <div className="absolute hidden z-14 right-0 bg-blue w-[100%] h-[230px] top-[68px] mt-[40px] z-10 sm:block transition-opacity duration-1500 ease-in">
+          <div ref={menuRef} className="absolute hidden z-14 right-0 bg-blue w-[100%] h-[230px] top-[68px] mt-[40px] z-10 sm:block transition-opacity duration-1500 ease-in">
             <div className="py-[50px] ">
               
 
@@ -106,7 +126,7 @@ const Header = () => {
                 <div className="flex flex-col gap-[25px] pl-[180px]">
                   
                     
-                    <h1
+                    <h1 
                       onClick={() => {
                         if (open) {
                           navigate("/");
