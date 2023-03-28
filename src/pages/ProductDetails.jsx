@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import { FaTwitterSquare } from "react-icons/fa";
-import { AiFillFacebook } from "react-icons/ai";
+import { AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { GrInstagram } from "react-icons/gr";
 
@@ -177,7 +177,7 @@ function ProductDetails() {
             </div>
             <div className="flex gap-[30px] mt-[20px] text-icn">
             <h1>
-                    <FaTwitterSquare className="w-[20px]  h-[25px]" />
+                    <AiFillTwitterSquare className="w-[20px]  h-[25px]" />
                   </h1>
                   <h1>
                     <AiFillFacebook className="w-[20px] h-[25px]" />

@@ -12,12 +12,13 @@ import {
   FaChevronRight,
   FaInstagramSquare,
   FaShoppingCart,
-  FaTwitterSquare,
+
 } from "react-icons/fa";
 import {
   AiFillFacebook,
   AiFillHome,
   AiFillNotification,
+  AiFillTwitterSquare,
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { AiFillContacts } from "react-icons/ai";
@@ -169,7 +170,7 @@ const Header = () => {
                 </div>
                 <div className="flex gap-[30px] items-center px-[20px] mt-[65px] ">
                   <h1>
-                    <FaTwitterSquare className="w-[20px] h-[25px]" />
+                    <AiFillTwitterSquare className="w-[20px] h-[25px]" />
                   </h1>
                   <h1>
                     <AiFillFacebook className="w-[20px] h-[25px]" />
