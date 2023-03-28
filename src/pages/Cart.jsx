@@ -74,7 +74,7 @@ const Cart = () => {
                    
                       <img
                         src={close}
-                        className="absolute left-0 mt-[20px] sm:left-[5px] "
+                        className="absolute left-0 mt-[20px] md:mt-[-5px] sm:left-[5px] "
                         onClick={() => {
                           handleRemove(item);
                        

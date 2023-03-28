@@ -93,8 +93,8 @@ function ProductDetails() {
               alt=""
               className="w-[490px] h-[500px]   sm:h-[300px] sm:w-[400px] md:h-[370px]"
             />
-            <div className=" absolute top-[20px] left-[20px] text-white bg-secondary rounded-full w-[50px] h-[50px] sm:w-[40px] sm:h-[40px] md:top-[120px] sm:top-[100px]">
-              <h1 className="pt-[14px] pl-[7px] font-black font-display text-[15px] sm:pt-[10px] sm:text-[14px] sm:pl-[4px]">-{products[id]?.data.Discount}%</h1>
+            <div className=" absolute top-[20px] left-[20px] text-white bg-secondary rounded-full w-[50px] h-[50px] sm:w-[40px] sm:h-[40px] md:top-[110px] md:w-[40px] md:h-[40px] sm:top-[100px]">
+              <h1 className="pt-[14px] pl-[7px] font-black font-display text-[15px] sm:pt-[10px] md:pt-[8px] sm:text-[14px] sm:pl-[4px]">-{products[id]?.data.Discount}%</h1>
             </div>
           </div>
           <div className="flex flex-1 gap-[20px] flex-col sm:mt-[20px] sm:gap-[20px] md:gap-[10px]">

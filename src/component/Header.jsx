@@ -87,26 +87,25 @@ const Header = () => {
         <div
           className="hidden sm:block"
           onClick={() => {
-            setopen(true);
+            if (!open) {
+              setopen(true)
+            } else {
+              setopen(false)
+            }
           }}>
           <img src={hamburger} alt="nav-icons " />
         </div>
       </div>
       {open ? (
         <>
-          <div className="absolute hidden right-0 bg-blue w-[260px] h-[100%] top-[68px] mt-[-67px] z-10 sm:block transition-opacity duration-1500 ease-in">
-            <div className="pt-[100px]">
-              <IoChevronForwardOutline
-                className="absolute right-[20px] text-white top-[60px] font-bold text-[20px] w-[20px] h-[24px] "
-                onClick={() => {
-                  setopen(false);
-                }}
-              />
+          <div className="absolute hidden z-14 right-0 bg-blue w-[100%] h-[230px] top-[68px] mt-[40px] z-10 sm:block transition-opacity duration-1500 ease-in">
+            <div className="py-[50px] ">
+              
 
-              <div className="px-[20px] pt-[80px] font-medium text-white font-display text-[16px]">
-                <div className="flex flex-col gap-[25px] ">
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <AiFillHome />
+              <div className="px-[20px]  font-medium text-white text-right font-display text-[18px]">
+                <div className="flex flex-col gap-[25px] pl-[180px]">
+                  
+                    
                     <h1
                       onClick={() => {
                         if (open) {
@@ -116,9 +115,9 @@ const Header = () => {
                       }}>
                       HOME
                     </h1>
-                  </div>
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <BsFillInfoSquareFill />
+                 
+              
+                    
                     <h1
                       onClick={() => {
                         if (open) {
@@ -128,9 +127,9 @@ const Header = () => {
                       }}>
                       ABOUT
                     </h1>
-                  </div>
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <AiFillContacts />
+                
+                  
+                   
                     <h1
                       onClick={() => {
                         if (open) {
@@ -140,31 +139,17 @@ const Header = () => {
                       }}>
                       CONTACT US
                     </h1>
-                  </div>
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <IoMdCart />
-                    <h1
-                      onClick={() => {
-                        navigate("/cart");
-                      }}>
-                      CART
-                    </h1>
-                  </div>
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <AiFillNotification />
-                    <h1>NOTIFICATIONS</h1>
-                  </div>
-                  <div className="flex items-center flex-row gap-[20px]">
-                    <IoMdSettings className="h-[28px]" />
-                    <h1>SETTINGS</h1>
-                  </div>
+                
+                 
+                  
+                 
+                  
+                   
+                    
+                
                 </div>
-                <div className="mt-[100px]">
-                  <button className="bg-white w-[100px] text-[14px] h-[40px] text-blue">
-                    LOG OUT
-                  </button>
-                </div>
-                <div className="flex gap-[30px] items-center px-[20px] mt-[65px] ">
+               
+                {/* <div className="flex gap-[30px] items-center px-[20px] mt-[65px] ">
                   <h1>
                     <AiFillTwitterSquare className="w-[20px] h-[25px]" />
                   </h1>
@@ -179,7 +164,7 @@ const Header = () => {
                   <h1>
                     <GrInstagram className="w-[20px] h-[25px]" />
                   </h1>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
