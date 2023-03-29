@@ -9,6 +9,13 @@ module.exports = {
       2: "2",
     },
 
+    keyframes: {
+      wiggle: {
+        '0%, 100%': { transform: 'top(20px)' },
+        '50%': { transform: 'rotate(3deg)' },
+      }
+    },
+
     colors: {
       secondary: "#D6763C",
       white: "#ffffff",

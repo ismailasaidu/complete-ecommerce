@@ -8,8 +8,6 @@ import { useState, useEffect } from "react";
 import email from "../Assets/email.png";
 import arrow from "../Assets/arrow.png";
 
-
-
 import {
   AiFillFacebook,
   AiFillHome,
@@ -17,9 +15,9 @@ import {
   AiFillTwitterSquare,
   AiOutlineInstagram,
 } from "react-icons/ai";
-import {IoChevronForwardOutline} from "react-icons/io5"
+import { IoChevronForwardOutline } from "react-icons/io5";
 import { AiFillContacts } from "react-icons/ai";
-import { IoMdCart, IoMdSettings ,} from "react-icons/io";
+import { IoMdCart, IoMdSettings } from "react-icons/io";
 import { BsFillInfoSquareFill } from "react-icons/bs";
 import { MdEmail, MdEmailMdEmail } from "react-icons/md";
 import { GrInstagram } from "react-icons/gr";
@@ -35,26 +33,22 @@ const Header = () => {
     ? (document.body.style.disabled = "true")
     : (document.body.style.overflow = "false");
 
+  let menuRef = useRef();
 
-
-   
-useEffect(() => {
- let handler =(e)=>{
-  if(!menuRef.current.contains(e.target)){
-    setopen(false) 
-  }
-
- }
-
- document.addEventListener("mousedown", handler)
-}, [])
-
-   
-const menuRef =useRef()
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current.contains(e.target)) {
+        setopen(false);
+      }
+    };
+    // docum ent.addEventListener("click", handler);
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  });
 
   const navigate = useNavigate();
   return (
-    <div className="flex items-center  justify-between pt-10 px-14 h-32 sm:px-[10px]  ">
+    <div   ref={menuRef} className="flex items-center  justify-between pt-10 px-14 h-32 sm:px-[10px]  ">
       <div>
         <h1
           className="font-display  text-5xl font-medium sm:text-[30px] "
@@ -102,89 +96,61 @@ const menuRef =useRef()
         <div className="sm:hidden">
           <img src={hamburger} alt="nav-icons" />
         </div>
-        <button 
-          className="hidden sm:block ;"
-          onClick={() => {
-            if (!open) {
-              setopen(true)
-              document.body.classList.toggle('menu-open');
-            } else {
-              setopen(false)
-            }
-            
+   
+        
+          <div    onClick={() => {
+            setopen(!open)
           }}>
-          <img src={hamburger} alt="nav-icons " />
-        </button>
+            <img
+              className="hidden sm:block ;"
+              src={hamburger}
+              alt="nav-icons "
+            />
+          </div>
+       
       </div>
       {open ? (
         <>
-          <div ref={menuRef} className="absolute hidden z-14 right-0 bg-blue w-[100%] h-[230px] top-[68px] mt-[40px] z-10 sm:block transition-opacity duration-1500 ease-in">
-            <div className="py-[50px] ">
-              
-
+          <div
+          
+            className={`absolute hidden shadow z-14 right-0 bg-blue w-[100%] h-[230px]  wiggle mt-[40px] z-10 sm:block transition-all  duration-1500 ease-in ${
+              open ? "top-20" : "top-[490px]"
+            }`}>
+            <div className="py-[50px] duration-500 ">
               <div className="px-[20px]  font-medium text-white text-right font-display text-[18px]">
                 <div className="flex flex-col gap-[25px] pl-[180px]">
-                  
-                    
-                    <h1 
-                      onClick={() => {
-                        if (open) {
-                          navigate("/");
-                        }
-                        setopen(!open);
-                      }}>
-                      HOME
-                    </h1>
-                 
-              
-                    
-                    <h1
-                      onClick={() => {
-                        if (open) {
-                          navigate("/about");
-                        }
-                        setopen(!open);
-                      }}>
-                      ABOUT
-                    </h1>
-                
-                  
-                   
-                    <h1
-                      onClick={() => {
-                        if (open) {
-                          navigate("/contact");
-                        }
-                        setopen(!open);
-                      }}>
-                      CONTACT US
-                    </h1>
-                
-                 
-                  
-                 
-                  
-                   
-                    
-                
+                  <h1
+                    onClick={() => {
+                      if (open) {
+                        navigate("/");
+                      }
+                      setopen(!open);
+                    }}>
+                    HOME
+                  </h1>
+
+                  <h1
+                    onClick={() => {
+                      if (open) {
+                        navigate("/about");
+                      }
+                      setopen(!open);
+                    }}>
+                    ABOUT
+                  </h1>
+
+                  <h1
+                    onClick={() => {
+                      if (open) {
+                        navigate("/contact");
+                      }
+                      setopen(!open);
+                    }}>
+                    CONTACT US
+                  </h1>
                 </div>
-               
-                {/* <div className="flex gap-[30px] items-center px-[20px] mt-[65px] ">
-                  <h1>
-                    <AiFillTwitterSquare className="w-[20px] h-[25px]" />
-                  </h1>
-                  <h1>
-                    <AiFillFacebook className="w-[20px] h-[25px]" />
-                  </h1>
 
-                  <h1>
-                    <MdEmail className="w-[20px] h-[25px]" />
-                  </h1>
-
-                  <h1>
-                    <GrInstagram className="w-[20px] h-[25px]" />
-                  </h1>
-                </div> */}
+                
               </div>
             </div>
           </div>
