@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import email from "../Assets/email.png";
 import arrow from "../Assets/arrow.png";
+import { Transition } from '@headlessui/react';
 
 import {
   AiFillFacebook,
@@ -111,11 +112,23 @@ const Header = () => {
       </div>
       {open ? (
         <>
+     
+
           <div
           
-            className={`absolute hidden shadow z-14 right-0 bg-blue w-[100%] h-[230px]  wiggle mt-[40px] z-10 sm:block transition-all  duration-1500 ease-in ${
+            className={`absolute hidden shadow z-14 right-0 bg-blue w-[100%] h-[230px]   mt-[40px]  z-10 sm:block transition-all  duration-150ms ease-in ${
               open ? "top-20" : "top-[490px]"
             }`}>
+ <Transition
+        show={open}
+        enter="menu-enter"
+        enterFrom="opacity-0 transform -translate-y-30"
+        enterTo="opacity-100 transform translate-y-0"
+        leave="menu-leave"
+        leaveFrom="opacity-100 transform translate-y-0"
+        leaveTo="opacity-0 transform -translate-y-10"
+      >
+
             <div className="py-[50px] duration-500 ">
               <div className="px-[20px]  font-medium text-white text-right font-display text-[18px]">
                 <div className="flex flex-col gap-[25px] pl-[180px]">
@@ -153,7 +166,11 @@ const Header = () => {
                 
               </div>
             </div>
+           </Transition>
           </div>
+         
+      
+
         </>
       ) : (
         ""
