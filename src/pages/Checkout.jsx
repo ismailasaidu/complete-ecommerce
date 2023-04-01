@@ -290,7 +290,7 @@ const Checkout = () => {
                         {item.data.Description}
                       </p>
                       <p className="font-medium text-[14px]  text-darktext font-Arimo">
-                      ${ Math.round(item.data.Price - (item.data.Discount / 100) * item.data.Price)}
+                      ${ Math.round((item.data.Price - (item.data.Discount / 100) * item.data.Price )* item.data.quantity)}
                       </p>
                     </div>
                   );
