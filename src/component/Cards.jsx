@@ -58,11 +58,6 @@ const Cards = () => {
         return <Card item={item} itemIndex={index} key={item.id} />
         ;
       })}
-{/* 
-      {
-        !products &&
-        window.location.reload()
-      } */}
 
     
     </div>
