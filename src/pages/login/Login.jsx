@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
 
 import { collection, getDocs } from "firebase/firestore";
