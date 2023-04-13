@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  plugins: [],
+
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     values: {
@@ -8,6 +10,7 @@ module.exports = {
     flexGrow: {
       2: "2",
     },
+
 
     keyframes: {
       wiggle: {
@@ -45,7 +48,7 @@ module.exports = {
       md: { max: "1022px" },
       // => @media (max-width: 767px) { ... }
 
-      sm: { max: "480px" },
+      sm: { max: "670px" },
       // => @media (max-width: 639px) { ... }
 
       // 'sm-landscape': {'raw': '(max-width: 639px) and (orientation: landscape)'},
@@ -83,5 +86,4 @@ module.exports = {
     variants: ["responsive", "active", "hover", "focus"],
     extend: {},
   },
-  plugins: [],
 };

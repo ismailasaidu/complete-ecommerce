@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Hero from '../component/Hero';
 import Divider from '../component/Divider';
 import Card from '../component/Cards';
@@ -16,6 +16,14 @@ const Home = () => {
     });
   };
   
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     < >
       

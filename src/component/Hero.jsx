@@ -10,7 +10,7 @@ const Hero = () => {
   
   return (
     <div>
-      <div className="bg-[url('./Assets/hero.png')] bg-cover bg-center bg-no-repeat sm:h-[200px] h-[500px]  relative  ">
+      <div className="bg-[url('./Assets/hero.png')]  bg-cover bg-center bg-no-repeat sm:h-[200px] h-[500px]  relative top-[80px]   ">
         <div className=" font-display flex items-center flex-col gap-10 text-white font-black absolute left-[750px] top-[190px] sm:left-[160px] sm:top-[80px] sm:gap-[10px] md:left-[450px] md:top-[250px]">
           <h1 className="font-bold text-center text-[50px] sm:text-[20px] md:text-[30px]">
             STYLIST PICKS BEAT <br></br> THE HEAT

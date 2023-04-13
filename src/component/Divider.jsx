@@ -4,7 +4,7 @@ const Divider = ({ text1, text2, text3 }) => {
   return (
     <div>
       <div>
-        <div className="text-center mt-[60px] ">
+        <div className="text-center mt-[160px] ">
           <div className=" text-center">
             {" "}
             <h1 className="text-[40px] ">{text1}</h1>

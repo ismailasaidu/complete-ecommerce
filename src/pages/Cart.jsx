@@ -18,6 +18,14 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 const Cart = () => {
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+
   const navigate = useNavigate()
   const dispatch = useDispatch();
 
@@ -47,10 +55,10 @@ const Cart = () => {
   }, [Cart, dispatch]);
 
   return (
-    <div>
-      <div className="px-14 sm:px-0 md:px-[30px]">
+    <div className="mt-[200px]" >
+      <div className="px-14 sm:px-0 md:px-[30px] ">
         <div>
-          <h1 className="text-grey mt-[50px]">
+          <h1 className="text-grey mt-[50px] sm:mt-[-40px]">
           <span className="cursor-pointer sm:pl-[30px]"
             onClick={() => {
               navigate("/");
@@ -61,7 +69,7 @@ const Cart = () => {
         </div>
         <div>
           <div>
-            <div className="grid grid-cols-4   border-b-[1px] gap-[150px] border-divider pl-[180px] h-[50px] mt-[100px] sm:pl-[30px] sm:gap-[50px] sm:text-[14px]  md:gap-[90px] md:pl-[35px]">
+            <div className="grid grid-cols-4   border-b-[1px] gap-[150px] border-divider pl-[180px] h-[50px] mt-[100px] sm:mt-[40px] sm:pl-[30px] sm:gap-[50px] sm:text-[14px]  md:gap-[90px] md:pl-[35px]">
               <h1 className="font-bold text-[18px] pt-[15px] sm:text-[14px]">Product</h1>
               <h1 className="font-bold text-[18px] pt-[15px] sm:text-[14px]">Price</h1>
               <h1 className="font-bold text-[18px] pt-[15px] sm:text-[14px]">Quantity</h1>
@@ -89,11 +97,11 @@ const Cart = () => {
 
                       </h1>
                       <div className="flex items-center gap-[5px]   md:pl-[10px]">
-                        <button className="sm:mt-[12px]"
+                        <button 
                           onClick={() => {
                             decrement(item.id);
                           }}>
-                          <AiOutlineMinus className="w-[12px] font-black"/>
+                          <AiOutlineMinus className="w-[12px] mt-[10px] font-black"/>
                         </button>
                         
                        
@@ -103,11 +111,11 @@ const Cart = () => {
                           
                         
                         </div>
-                        <button className="sm:mt-[12px]"
+                        <button 
                           onClick={() => {
                             increment(item.id);
                           }}>
-                          <AiOutlinePlus/>
+                          <AiOutlinePlus className="mt-[10px]"/>
                         </button>
                       </div>
                       <h1 className="font-medium text-[18px] text-grey object-contain pt-[15px] md:pl-[20px]">

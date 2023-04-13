@@ -49,17 +49,17 @@ const Header = () => {
 
   const navigate = useNavigate();
   return (
-    <div   ref={menuRef} className="flex items-center  justify-between pt-10 px-14 h-32 sm:px-[10px]  ">
+    <div   ref={menuRef} className="flex items-center  justify-between pt-10 px-14 h-32 sm:px-[10px]  sm:pt-[0px] sm:h-[100px] fixed top-0 bg-white z-10 w-[100%] shadow">
       <div>
         <h1
-          className="font-display  text-5xl font-medium sm:text-[30px] "
+          className="font-display  cursor-pointer text-5xl font-medium sm:text-[30px] "
           onClick={() => {
             navigate("/");
           }}>
           NorthStar
         </h1>
       </div>
-      <div className="flex   gap-7 font-Arimo font-bold text-[14px] mr-[500px] pt-[20px] sm:hidden md:flex md:mr-0 ">
+      <div className="flex   gap-7 font-Arimo font-bold text-[14px] mr-[200px] pt-[20px] sm:hidden md:flex md:mr-0 ">
         <p
           className="cursor-pointer  "
           onClick={() => {
@@ -82,7 +82,7 @@ const Header = () => {
           CONTACT US
         </p>
       </div>
-      <div className="flex items-center gap-[10px] md:mt-[10px] sm:gap-[2px] md:gap-[5px]">
+      <div className="flex items-center gap-[10px] cursor-pointer md:mt-[10px] sm:gap-[2px] md:gap-[5px]">
         <img src={account} alt="nav-icons" className="sm:hidden" />
         <div
           className="relative sm:w-[40px]"
@@ -96,7 +96,7 @@ const Header = () => {
         </div>
         <div className="sm:hidden">
           <img src={hamburger} alt="nav-icons" />
-        </div>
+        </div> 
    
         
           <div    onClick={() => {
@@ -116,8 +116,8 @@ const Header = () => {
 
           <div
           
-            className={`absolute hidden shadow z-14 right-0 bg-blue w-[100%] h-[230px]   mt-[40px]  z-10 sm:block transition-all  duration-150ms ease-in ${
-              open ? "top-20" : "top-[490px]"
+            className={`absolute hidden  shadow z-14 right-0 bg-blue w-[100%] h-[230px]   mt-[40px]  z-10 sm:block transition-all  duration-150ms ease-in ${
+              open ? "top-10" : "top-[490px]"
             }`}>
  <Transition
         show={open}
@@ -132,7 +132,7 @@ const Header = () => {
             <div className="py-[50px] duration-500 ">
               <div className="px-[20px]  font-medium text-white text-right font-display text-[18px]">
                 <div className="flex flex-col gap-[25px] pl-[180px]">
-                  <h1
+                  <h1  className="cursor-pointer"
                     onClick={() => {
                       if (open) {
                         navigate("/");
@@ -142,7 +142,7 @@ const Header = () => {
                     HOME
                   </h1>
 
-                  <h1
+                  <h1  className="cursor-pointer"
                     onClick={() => {
                       if (open) {
                         navigate("/about");
@@ -152,7 +152,7 @@ const Header = () => {
                     ABOUT
                   </h1>
 
-                  <h1
+                  <h1  className="cursor-pointer"
                     onClick={() => {
                       if (open) {
                         navigate("/contact");

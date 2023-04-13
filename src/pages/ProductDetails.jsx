@@ -21,12 +21,12 @@ import { GrInstagram } from "react-icons/gr";
 function ProductDetails() {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   useEffect(() => {
     getProducts();
@@ -84,14 +84,14 @@ function ProductDetails() {
     },
   ];
   return (
-    <div style={{ opacity: show ? "0.6" : "" }}>
+    <div style={{ opacity: show ? "0.6" : "" }} className="mt-[200px] sm:mt-[150px]">
       <div className="px-14 sm:px-[20px]">
         <div className="flex mt-[100px] sm:flex-col  md:gap-[30px]">
           <div className="flex-1 md:pt-[80px] sm:mt-[-100px] relative">
             <img
               src={products[id]?.data?.imgSrc}
               alt=""
-              className="w-[490px] h-[500px]   sm:h-[300px] sm:w-[400px] md:h-[370px]"
+              className="w-[490px] h-[500px]  object-cover sm:h-[300px] sm:w-[400px] md:h-[370px]"
             />
             <div className=" absolute top-[20px] left-[20px] text-white bg-secondary rounded-full w-[50px] h-[50px] sm:w-[40px] sm:h-[40px] md:top-[110px] md:w-[40px] md:h-[40px] sm:top-[100px]">
               <h1 className="pt-[14px] pl-[7px] font-black font-display text-[15px] sm:pt-[10px] md:pt-[8px] sm:text-[14px] sm:pl-[4px]">

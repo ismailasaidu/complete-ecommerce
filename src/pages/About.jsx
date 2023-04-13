@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import woman from "../Assets/woman.png";
 import man from "../Assets/man.png";
 import { useNavigate } from "react-router-dom";
@@ -11,6 +11,14 @@ import "react-multi-carousel/lib/styles.css";
 
 const About = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -34,7 +42,7 @@ const About = () => {
 
   return (
     <div>
-      <div className="bg-[url('./Assets/about.jpg')] h-[340px] bg-cover bg-center bg-no-repeat sm:h-[200px] ">
+      <div className="bg-[url('./Assets/about.jpg')] h-[340px] bg-cover bg-center bg-no-repeat sm:h-[200px] relative top-[80px] ">
         <h1 className="text-white font-black text-[34px] font-display pt-[260px] pl-14 sm:text-[20px]  sm:pt-[140px] sm:pl-[20px]">
           ABOUT NORTHSTAR
         </h1>
@@ -44,7 +52,7 @@ const About = () => {
           <div className=" flex-1 relative ">
             <img src={woman} />
             <button
-              className=" absolute bottom-[40px] left-[210px] bg-white text-blue w-[150px] h-[50px] rounded-[20px] sm:left-[70px] sm:bottom-[10px] md:left-[100px] md:w-[120px]"
+              className=" absolute bottom-[40px] left-[37%] bg-white text-blue w-[150px] h-[50px] rounded-[20px] sm:left-[70px] sm:bottom-[10px] md:left-[70px] md:w-[120px]"
               onClick={() => {
                 navigate("/");
               }}>
@@ -54,7 +62,7 @@ const About = () => {
           <div className=" flex-1 relative sm:hidden">
             <img src={man} />
             <button
-              className=" absolute bottom-[40px] left-[210px] bg-white text-blue w-[150px] h-[50px] rounded-[20px] md:left-[100px] md:w-[120px]"
+              className=" absolute bottom-[40px] left-[37%] bg-white text-blue w-[150px] h-[50px] rounded-[20px] md:left-[70px] md:w-[120px]"
               onClick={() => {
                 navigate("/");
               }}>

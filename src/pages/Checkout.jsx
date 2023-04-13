@@ -15,7 +15,17 @@ import PhoneInput, {
   isValidPhoneNumber
 } from "react-phone-number-input";
 
+
+
+
+
 const Checkout = () => {
+
+
+ 
+
+
+
   const navigate = useNavigate();
   const cart = useSelector((state) => state.cart.cart);
   const Cart = useSelector((state) => state.cart);
@@ -29,7 +39,7 @@ const Checkout = () => {
   useEffect(() => {
     console.log(errors);
     if (Object.keys(errors).length === 0 && isSubmit) {
-      // console.log(formValues);
+   
     }
   }, [errors]);
 
@@ -48,12 +58,7 @@ const Checkout = () => {
     console.log(e.target);
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    // if (!Value) {
-      
-    // } else {
-      
-    // }
-    // console.log(formValues);
+  
   };
 
   const handleSubmit = (e) => {
@@ -160,10 +165,11 @@ const Checkout = () => {
     onClose: () => toast.error("payment cancelled"),
   };
   return (
+  
     <div>
-      <div className="px-14 sm:px-[10px]">
+      <div className="px-14 sm:px-[20px] mt-[200px]  relative">
         <div>
-          <h1 className="text-grey mt-[50px] className='cursor-pointer'">
+          <h1 className="text-grey mt-[50px] sm:mt-[-40px] className='cursor-pointer'">
             <span
               onClick={() => {
                 navigate("/");
@@ -178,9 +184,9 @@ const Checkout = () => {
             Billing details
           </h1>
         </div>
-        {/* <pre>{JSON.stringify(formValues,undefined,2)}</pre> */}
+
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col gap-[20px] mt-[50px]   ">
+          <div className="flex flex-col  gap-[20px] mt-[50px]   ">
             <div className="flex flex-col ">
               <label htmlFor="FullName" className="text-darktext  text-[12px]">
                 Full Name<sup className="text-star">*</sup>
@@ -190,7 +196,7 @@ const Checkout = () => {
                 type="name"
                 name="fullname"
                 required
-                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[400px] sm:w-[340px]"
+                className="w-[600px] md:w-[100%] border-divider border-[2px] h-[30px] outline-none px-[20px]  sm:w-[100%]"
                 value={formValues.fullname}
                 onChange={handleChange}
               />
@@ -210,7 +216,7 @@ const Checkout = () => {
                 type="text"
                 name="address"
                 required
-                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[400px] sm:w-[340px]"
+                className="w-[600px] border-divider  md:w-[100%] border-[2px] h-[30px] outline-none px-[20px]  sm:w-[100%]"
                 value={formValues.address}
                 onChange={handleChange}
               />
@@ -226,7 +232,7 @@ const Checkout = () => {
                 id="T/C"
                 type="text"
                 name="town"
-                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[400px] sm:w-[340px]"
+                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[100%] sm:w-[100%]"
                 value={formValues.town}
                 onChange={handleChange}
               />
@@ -245,7 +251,7 @@ const Checkout = () => {
                 useNationalFormatForDefaultCountryValue
                 type="tel"
                 name="Value"
-                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[400px] sm:w-[340px]"
+                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[100%] sm:w-[100%]"
                 value={Value}
                 onChange={Value => setValue(Value)}
               />
@@ -264,7 +270,7 @@ const Checkout = () => {
                 id="Email"
                 type="email"
                 name="email"
-                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[400px]  sm:w-[340px]"
+                className="w-[600px] border-divider border-[2px] h-[30px] outline-none px-[20px] md:w-[100%]  sm:w-[100%]"
                 value={formValues.email}
                 onChange={handleChange}
               />
@@ -327,6 +333,7 @@ const Checkout = () => {
       </div>
       <ToastContainer />
     </div>
+ 
   );
 };
 
