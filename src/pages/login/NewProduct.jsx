@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, storage } from "../../lib/init-firebase";
