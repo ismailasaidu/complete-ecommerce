@@ -149,7 +149,7 @@ const Cart = () => {
               </p>
             </div>
             <div>
-              <button className="  w-[280px] bg-secondary sm:bg-blue text-white h-[50px]" onClick={()=>{cart.length >0 ? navigate("/checkout"): toast.info("You Have No Item In Your Cart")}}>
+              <button className="  w-[280px] bg-secondary sm:bg-blue text-white h-[50px]" onClick={()=>{cart.length >0 ? navigate("/checkout"): toast.info("You Have No Items In Cart")}}>
                 PROCEED TO CHECKOUT
               </button>
             </div>
