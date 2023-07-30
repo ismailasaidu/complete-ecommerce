@@ -68,7 +68,7 @@ function ProductDetails() {
   const [show, setshow] = useState(false);
   const rating = [
     {
-      imgSrc: "/ratings.png",
+      imgSrc: "/.png",
     },
     {
       imgSrc: "/ratings.png",

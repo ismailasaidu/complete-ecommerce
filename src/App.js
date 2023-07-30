@@ -17,12 +17,6 @@ import NewProduct from "./pages/login/NewProduct";
 
 
  
-// document.addEventListener("keydown", e=>{
-//   e.preventDefault()
-//   if (e.key === "1") {
-//     window.location.assign("/contact");
-//   }
-// })
 
 
 

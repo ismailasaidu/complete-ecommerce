@@ -11,7 +11,7 @@ const Footer = () => {
   
     <div >
      
-      <div className="h-[500px]  flex flex-row justify-between px-14 bg-lightGrey py-[200px] sm:py-[0px] md:py-0 sm:flex-col sm:pt-[60px] sm:px-[20px]  gap-[10px] sm:h-[600px] md:flex-col md:gap-[20px] md:px-14 md:h-[600px]">
+      <div className="h-[500px] md:mt-[50px]  flex flex-row justify-between px-14 bg-lightGrey py-[200px] sm:py-[0px] md:py-0 sm:flex-col sm:pt-[60px] sm:px-[20px]  gap-[10px] sm:h-[600px] md:flex-col md:gap-[20px] md:px-14 md:h-[600px]">
         <div className="flex flex-col gap-[20px] text-grey md:gap-[10px]">
           <div>
             <h1 className="font-display font-bold text-[16px] sm:text-[12px] ">

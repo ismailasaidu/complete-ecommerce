@@ -55,11 +55,12 @@ const Header = () => {
           className="font-display  cursor-pointer text-5xl font-medium sm:text-[30px] "
           onClick={() => {
             navigate("/");
+            setopen(!open)
           }}>
           NorthStar
         </h1>
       </div>
-      <div className="flex   gap-7 font-Arimo font-bold text-[14px] mr-[200px] pt-[20px] sm:hidden md:flex md:mr-0 ">
+      <div className="flex gap-[30px] font-Arimo font-bold text-[14px] mr-[200px] pt-[20px] sm:hidden md:flex md:mr-0 ">
         <p
           className="cursor-pointer  "
           onClick={() => {
@@ -88,6 +89,7 @@ const Header = () => {
           className="relative sm:w-[40px]"
           onClick={() => {
             navigate("/cart");
+            setopen(!open)
           }}>
           <img src={Cart} alt="nav-icons" />
           <div className="absolute bottom-3 left-3 bg-blue rounded-full w-4 h-4 ">
@@ -116,14 +118,14 @@ const Header = () => {
 
           <div
           
-            className={`absolute hidden  shadow z-14 right-0 bg-blue w-[100%] h-[230px]   mt-[40px]  z-10 sm:block transition-all  duration-150ms ease-in ${
-              open ? "top-10" : "top-[490px]"
+            className={` sm:absolute hidden  shadow z-14 right-0 bg-blue w-[100%] h-[230px]   mt-[40px]  z-10 sm:block transition-all  duration-500 ease-in ${
+              open ? "top-[50px]" : "top-[490px]"
             }`}>
 
 
             <div className="py-[50px] duration-500 ">
               <div className="px-[20px]  font-medium text-white text-right font-display text-[18px]">
-                <div className="flex flex-col gap-[25px] pl-[180px]">
+                <div className="flex flex-col space-y-[25px] pl-[180px]">
                   <h1  className="cursor-pointer"
                     onClick={() => {
                       if (open) {
@@ -134,7 +136,7 @@ const Header = () => {
                     HOME
                   </h1>
 
-                  <h1  className="cursor-pointer"
+                  <h1  className="cursor-pointer hover:text-red"
                     onClick={() => {
                       if (open) {
                         navigate("/about");
