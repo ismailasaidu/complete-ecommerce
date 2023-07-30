@@ -55,7 +55,10 @@ const Header = () => {
           className="font-display  cursor-pointer text-5xl font-medium sm:text-[30px] "
           onClick={() => {
             navigate("/");
-            setopen(!open)
+            if (open) {
+              setopen(!open)
+            }
+          
           }}>
           NorthStar
         </h1>
@@ -89,7 +92,11 @@ const Header = () => {
           className="relative sm:w-[40px]"
           onClick={() => {
             navigate("/cart");
-            setopen(!open)
+            if (open) {
+              setopen(!open)
+            }
+          
+         
           }}>
           <img src={Cart} alt="nav-icons" />
           <div className="absolute bottom-3 left-3 bg-blue rounded-full w-4 h-4 ">
