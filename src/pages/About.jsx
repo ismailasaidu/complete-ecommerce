@@ -52,7 +52,7 @@ const About = () => {
           <div className=" flex-1 relative ">
             <img src={woman} />
             <button
-              className=" absolute bottom-[40px] left-[37%] bg-white text-blue w-[150px] h-[50px] rounded-[20px] sm:left-[70px] sm:bottom-[10px] md:left-[70px] md:w-[120px]"
+              className=" absolute bottom-[40px] left-[37%] bg-white text-blue w-[150px] h-[50px] rounded-[20px] sm:left-[90px] sm:bottom-[10px] md:left-[70px] md:w-[120px]"
               onClick={() => {
                 navigate("/");
               }}>
