@@ -4,6 +4,7 @@ import { Store } from "../component/product";
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../lib/init-firebase";
+import { useEffect } from "react";
 
 const Cards = () => {
   const [products, setProducts] = useState([]);

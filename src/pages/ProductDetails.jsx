@@ -32,6 +32,8 @@ function ProductDetails() {
     getProducts();
   }, []);
 
+
+
   const sizes = [
     {
       size: "Small",
@@ -51,6 +53,7 @@ function ProductDetails() {
           id: doc.id,
         }));
         setProducts(product);
+        console.log(product)
       })
 
       .catch((error) => toast.error(error.message));

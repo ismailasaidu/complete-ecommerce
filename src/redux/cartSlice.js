@@ -24,7 +24,7 @@ export const cartSlice = createSlice({
         } else {
           state.value.push(action.payload.id);
           state.cart.push(action.payload);
-          toast.success(`${action.payload.data.Description} added to cart`)
+          toast.success(`${action.payload.data.Description}  added to cart`)
           localStorage.setItem("CartItems",JSON.stringify(state.cart))
           localStorage.setItem("CartValue",JSON.stringify(state.value))
 
