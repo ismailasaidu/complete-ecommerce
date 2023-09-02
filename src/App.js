@@ -1,5 +1,5 @@
 import About from "./pages/About";
-import Contact from "../../Contact";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import {Routes ,Route, BrowserRouter, Navigate, useNavigate} from "react-router-dom"
 import Header from "./component/Header";
